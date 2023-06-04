@@ -1,0 +1,167 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@font-face {
+	font-family: 'Poppins';
+	src: url('./fonts/Poppins-Medium.eot');
+	src: local('Poppins Medium'), local('Poppins-Medium'),
+	url('./fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Poppins-Medium.woff2') format('woff2'),
+	url('./fonts/Poppins-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('./fonts/Poppins-Regular.eot');
+	src: local('Poppins Regular'), local('Poppins-Regular'),
+	url('./fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Poppins-Regular.woff2') format('woff2'),
+	url('./fonts/Poppins-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('./fonts/Poppins-SemiBold.eot');
+	src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+	url('./fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Poppins-SemiBold.woff2') format('woff2'),
+	url('./fonts/Poppins-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+div.components-grid {
+	-webkit-box-align: center;
+	align-items: center;
+	display: grid;
+	gap: 2rem;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 1fr;
+
+	.components-card {
+		background: #f3f3f3;
+
+		.upper-card {
+			height: 50%;
+
+			.components-card-media {
+				width: 100%;
+				padding-bottom: 75%;
+				position: relative;
+
+				img {
+					position: absolute;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					left: 0;
+					object-fit: cover;
+				}
+			}
+
+		}
+
+		.lower-card {
+			background: inherit;
+			transition: all ease-in-out 0.4s;
+			height: 50%;
+
+			.components-card-body {
+				box-sizing: border-box;
+				padding: 16px 24px;
+				font-family: 'Poppins', serif;
+				font-size: 14px;
+				line-height: 21px;
+				text-transform: uppercase;
+
+				h4 {
+					font-weight: 600;
+					font-size: 24px;
+					line-height: 123.5%;
+					color: #000;
+					text-transform: none;
+				}
+			}
+
+			.components-card-body:first-of-type {
+				min-height: 150px;
+
+				.components-text {
+					font-weight: 600;
+				}
+			}
+
+			.components-card-footer {
+				display: flex;
+				-webkit-box-align: center;
+				align-items: center;
+				flex-direction: row;
+				gap: 8px;
+				-webkit-box-pack: justify;
+				justify-content: space-between;
+				box-sizing: border-box;
+				padding: 0 24px;
+
+				a {
+					font-family: 'Poppins', serif;
+					font-weight: 500;
+					font-size: 15px;
+					width: 100%;
+					display: block;
+					text-decoration: none;
+					letter-spacing: 0.01em;
+					color: rgba(0, 0, 0, 0.55);
+					border-top: 2px solid #dbdbdb;
+					padding-top: 1rem;
+					padding-bottom: 1rem;
+					transition: all ease-in-out 0.4s;
+
+					.arrow-right {
+						float: right;
+
+						path {
+							transition: all ease-in-out 0.4s;
+							fill: rgba(0, 0, 0, 0.55);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	> div {
+		padding-top: 2rem;
+		transition: all ease-in-out 0.4s;
+
+		&:hover {
+			padding-top: 0;
+			box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.1);
+
+			.lower-card {
+				background: #f9f9f9;
+
+				.components-card-footer a {
+					color: #000000;
+					text-decoration: underline;
+					text-decoration-thickness: 2px;
+
+					path {
+						fill: #000000;
+					}
+				}
+			}
+		}
+	}
+
+}

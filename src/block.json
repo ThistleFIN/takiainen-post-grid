@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/takiainen-post-grid",
+	"version": "0.1.0",
+	"title": "Takiainen Post Grid",
+	"category": "widgets",
+	"icon": "admin-page",
+	"description": "A simple Post Grid Block.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"fetchedPosts": {
+			"type": "array",
+			"items": {
+				"type": "object"
+			},
+			"default": []
+		}
+	},
+	"textdomain": "takiainen-post-grid",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
